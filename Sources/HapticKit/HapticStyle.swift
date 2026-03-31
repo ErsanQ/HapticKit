@@ -1,23 +1,20 @@
+import Foundation
+
 #if canImport(UIKit)
 import UIKit
+#endif
 
 // MARK: - HapticImpactStyle
 
 /// The intensity level for an impact haptic.
-///
-/// Maps directly to `UIImpactFeedbackGenerator.FeedbackStyle`.
 public enum HapticImpactStyle: Sendable {
-    /// A soft, subtle tap.
     case light
-    /// A medium-strength tap. Good for most interactions.
     case medium
-    /// A strong, solid tap.
     case heavy
-    /// A crisp, rigid tap.
     case rigid
-    /// A soft, rounded tap.
     case soft
 
+    #if canImport(UIKit)
     var uiStyle: UIImpactFeedbackGenerator.FeedbackStyle {
         switch self {
         case .light:  return .light
@@ -27,21 +24,18 @@ public enum HapticImpactStyle: Sendable {
         case .soft:   return .soft
         }
     }
+    #endif
 }
 
 // MARK: - HapticNotificationStyle
 
 /// The type of notification haptic to trigger.
-///
-/// Maps directly to `UINotificationFeedbackGenerator.FeedbackType`.
 public enum HapticNotificationStyle: Sendable {
-    /// Indicates a task completed successfully.
     case success
-    /// Indicates a warning.
     case warning
-    /// Indicates an error occurred.
     case error
 
+    #if canImport(UIKit)
     var uiType: UINotificationFeedbackGenerator.FeedbackType {
         switch self {
         case .success: return .success
@@ -49,5 +43,5 @@ public enum HapticNotificationStyle: Sendable {
         case .error:   return .error
         }
     }
+    #endif
 }
-#endif
