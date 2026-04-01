@@ -24,7 +24,6 @@ let package = Package(
             path: "Sources/HapticKit"),
         .testTarget(
             name: "HapticKitTests",
-            dependencies: ["HapticKit"],
-            path: "Tests/HapticKitTests"),
+            dependencies: ["HapticKit"]),
     ]
 )
