@@ -1,3 +1,4 @@
+#if canImport(SwiftUI)
 import SwiftUI
 
 #if canImport(UIKit)
@@ -46,3 +47,4 @@ public final class Haptic: Sendable {
         #endif
     }
 }
+#endif

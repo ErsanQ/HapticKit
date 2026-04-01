@@ -1,3 +1,4 @@
+#if canImport(SwiftUI)
 import SwiftUI
 
 public extension View {
@@ -14,3 +15,4 @@ public extension View {
         }
     }
 }
+#endif

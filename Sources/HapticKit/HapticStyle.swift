@@ -1,3 +1,4 @@
+#if canImport(SwiftUI)
 import SwiftUI
 
 #if canImport(UIKit)
@@ -37,3 +38,4 @@ public extension HapticStyle {
     /// An error notification sequence.
     static var error: HapticStyle { .notification(.error) }
 }
+#endif
